@@ -1,3 +1,25 @@
-<p>
-  heroe works!
-</p>
+<!--Cuando utilizamos | es un pipe y sirven para hacer el nombre enmayuscula utilizando | uppercase
+Tambien utilizamos | date: 'y' para solo dejar el ver el año.
+-->
+<h1 class="animated fadeIn" > {{ heroe.nombre | uppercase}} <small>({{heroe.aparicion | date:'y'}})</small> </h1>
+<hr>
+<div class="row animated fadeIn fast">
+  <div class="col-md-4">
+  <img [src]="heroe.img" class="img-fluid" [alt]="heroe.nombre">
+  <br><br>
+  <a [routerLink]="['/heroes']" class="btn btn-outilne-danger btn-block">Regresar</a>
+</div>
+<div class="col-md-8">
+  <h3> {{ heroe.nombre }} </h3>
+  <hr>
+  <p>
+    {{ heroe.bio }}
+  </p>
+  <div>
+    <!--Aqui con el ngIf ponemos una desicion para
+  si es de marvel que salga el logo de marvel y si es de dc que salga de DC-->
+    <img *ngIf="heroe.casa =='DC'" class="img-logo" src="assets/img/descarga.png" alt="DC">
+    <img *ngIf="heroe.casa =='Marvel'" class="img-logo" src="assets/img/marvel.png" alt="Marvel">
+  </div>
+</div>
+</div>

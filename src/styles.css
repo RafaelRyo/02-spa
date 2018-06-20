@@ -3,9 +3,13 @@
 /*esto del body es para que no se pegue abajo de la pagina */
 body{
   padding-bottom:50px;
+
+
 }
 
-
+.img-logo{
+  width: 120px;
+}
 
 .main-container{
   margin-top: 20px;
